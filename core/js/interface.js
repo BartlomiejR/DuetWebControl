@@ -1158,10 +1158,10 @@ $(".btn-move").click(function(e) {
 		var axisNumber = parseInt($(this).data("axis"));
 		axis = axisNames[axisNumber];
 	}
-
+	var l_feedRate = (axis == "Z") ? settings.moveZFeedrate : settings.moveFeedrate;
 	var moveString = "M120\nG91\nG1 ";
 	moveString += axis + $(this).data("amount");
-	moveString += " F" + settings.moveFeedrate + "\nM121";
+	moveString += " F" + l_feedRate + "\nM121";
 	sendGCode(moveString);
 	e.preventDefault();
 });

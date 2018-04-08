@@ -1177,6 +1177,7 @@ function getConfigResponse() {
 
 // Send G-Code directly to the firmware
 function sendGCode(gcode, fromInput) {
+	console.log("Gcode: " + gcode + " from: " + fromInput);
 	if (gcode == "") {
 		return;
 	}

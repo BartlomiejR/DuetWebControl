@@ -26,6 +26,7 @@ var settings = {
 	language: "en",
 
 	moveFeedrate: 6000,				// in mm/min
+	moveZFeedrate: 80,				// in mm/min
 	halfZMovements: false,			// use half Z movements
 	babysteppingZ: 0.05,			// in mm
 	showATXControl: false,			// show ATX control
